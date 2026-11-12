@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-main: #fcfdfd;
+    --bg-card: #f4f7f4;
+    --text-main: #1f2923;
+    --text-muted: #5c6b61;
+    --border-main: #e2e8e3;
+    
+    --accent-green: #2e6f40;
+    --accent-green-light: #e8f3ea;
+    --accent-yellow: #d99b26;
+    --accent-yellow-light: #fef7e7;
+    --accent-hover: #b8821d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+/* //navbar */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(252, 253, 253, 0.9);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4%;
+    border-bottom: 1px solid var(--border-main);
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-green);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-yellow);
+}
+
+/* //layout utama */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+section {
+    padding: 6rem 4%;
+    border-bottom: 1px solid var(--border-main);
+}
+
+.section-title {
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-green);
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* //beranda */
+#beranda {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid var(--accent-green);
+    background-color: var(--accent-green-light);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--accent-yellow);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.deskripsi {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-main);
+}
+
+.btn-primary {
+    background-color: var(--accent-yellow);
+    color: #ffffff;
+    border-color: var(--accent-yellow);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: var(--accent-green-light);
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-green);
+    color: #ffffff;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border: 1px solid var(--border-main);
+}
+
+/* //tentang */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-about {
+    background-color: var(--bg-card);
+    padding: 3rem;
+    border: 1px solid var(--border-main);
+}
+
+.card-about h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    color: var(--accent-green);
+}
+
+.card-about p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* //data */
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.data-info {
+    border: 1px solid var(--border-main);
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-card);
+}
+
+.teaser-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.teaser-text strong {
+    color: var(--accent-yellow);
+}
+
+.data-photo img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border: 1px solid var(--border-main);
+}
+
+.data-photo figcaption {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* //aksi */
+.action-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.action-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-main);
+    padding: 2.5rem;
+    transition: all 0.2s ease;
+}
+
+.action-card:hover {
+    border-color: var(--accent-yellow);
+    background-color: var(--accent-yellow-light);
+}
+
+.action-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--accent-green);
+}
+
+.action-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* //tim */
+.team-box {
+    border: 1px solid var(--border-main);
+    padding: 3rem;
+    background-color: var(--bg-card);
+}
+
+
+.class-badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    background-color: var(--accent-green-light);
+    border: 1px solid var(--accent-green);
+    padding: 0.4rem 0.8rem;
+    font-weight: 600;
+}
+
+.member-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.member-list li {
+    padding: 1.2rem;
+    border: 1px solid var(--border-main);
+    background-color: var(--bg-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.member-list li:hover {
+    border-color: var(--accent-green);
+    background-color: var(--accent-green-light);
+}
+
+/* //footer */
+footer {
+    padding: 3rem 4%;
+    text-align: center;
+    border-top: 1px solid var(--border-main);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    background-color: var(--bg-card);
+}
